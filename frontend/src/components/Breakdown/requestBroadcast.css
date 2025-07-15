@@ -1,0 +1,109 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease forwards;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.4s ease forwards;
+}
+
+.garage-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #4ade80;
+  border-radius: 9999px;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.4);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+.garage-dot-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.garage-dot-container > div {
+  margin: 0 5px;
+}
+.garage-dot-container > div:first-child {
+  margin-left: 0;
+}
+.garage-dot-container > div:last-child {
+  margin-right: 0;
+}
+.garage-dot-container > div > div {
+  width: 12px;
+  height: 12px;
+  background-color: #4ade80;
+  border-radius: 9999px;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.4);
+}
+.garage-dot-container > div > div:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.garage-dot-container > div > div:nth-child(3) {
+  animation-delay: 1s;
+}
+.garage-dot-container > div > div:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.garage-dot-container > div > div:nth-child(5) {
+  animation-delay: 2s;
+}
+.garage-dot-container > div > div:nth-child(6) {
+  animation-delay: 2.5s;
+}
+.garage-dot-container > div > div:nth-child(7) {
+  animation-delay: 3s;
+}
+.garage-dot-container > div > div:nth-child(8) {
+  animation-delay: 3.5s;
+}
+.garage-dot-container > div > div:nth-child(9) {
+  animation-delay: 4s;
+}
+.garage-dot-container > div > div:nth-child(10) {
+  animation-delay: 4.5s;
+}
+@keyframes beam-ping {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.garage-beam {
+  animation: beam-ping 1s ease-out forwards;
+  stroke: #6366f1;
+  stroke-width: 2;
+  stroke-dasharray: 10;
+  fill: none;
+}

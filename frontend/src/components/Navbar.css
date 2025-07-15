@@ -1,0 +1,158 @@
+.menu-container a, .menu-container p{
+  color: #000;
+  text-decoration: none;
+  line-height: 100%;
+}
+
+.menu-container{
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.menu-bar, .menu-overlay{
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  z-index: 100;
+}
+
+.menu-bar-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-bar a, .menu-open p{
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-close p{
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-bar{
+  align-items: center;
+  /* max-width: 1200px; */
+  transition: all 0.5s;
+}
+
+.menu-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #FEFBEF;
+  z-index: 200;
+  display: flex;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menu-close-icon{
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-copy{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.menu-preview{
+  flex: 4;
+  padding-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-close-icon p{
+  font-size: 100px; 
+  -webkit-text-stroke: 3px #FEFBEF;
+  line-height: 70%;
+}
+
+.menu-links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-link-item{
+  width: max-content;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.menu-link-item-holder{
+  position: relative;
+}
+
+.menu-link-item-holder a{
+  color:#000;
+  font-size: 80px;
+  letter-spacing: -0.02em;
+  line-height: 85%;
+}
+
+.menu-info{
+  display: flex;
+}
+
+.menu-info-col{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+
+.navbar-scrolled{
+  backdrop-filter: blur(11px) saturate(160%);
+  -webkit-backdrop-filter: blur(5px) saturate(160%);
+  background-color: rgba(255, 255, 255, 0.65);
+  box-shadow: rgba(146, 146, 146, 0.24) 0px 0px 5px;
+}
+
+.navbar-scrolled .menu-bar{
+  padding-top: 1em;
+}
+
+.navbar-scrolled .menu-overlay{
+  padding-top: 1em;
+}
+
+.menu-overlay-bar{
+  padding-top: 4vh;
+}
+
+@media (max-width: 900px){
+  .menu-close-icon{
+    display: none;
+  }
+
+  .menu-copy{
+    padding-top: 8em;
+  }
+
+  .menu-link-item-holder a{
+    font-size: 30px;
+  }
+}
